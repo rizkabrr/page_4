@@ -45,17 +45,30 @@
           <p class="is-size-4"><strong>Belanjaan anda</strong></p>
         </div>
         <div class="columns">
-          <div class="column is-three-quarters">
+          <div class="column">
+            <div class="columns has-text-centered pb-0">
+              <div class="column is-2 has-text-grey">Gambar</div>
+              <div class="column has-text-grey">Deskripsi</div>
+              <div class="column is-1 has-text-grey">Jumlah</div>
+              <div class="column is-2 mr-6 has-text-grey has-text-right">
+                Harga
+              </div>
+            </div>
+          </div>
+          <div class="column is-3"></div>
+        </div>
+        <div class="columns">
+          <div class="column">
             <div class="card-pp" v-for="(item, i) in items" :key="i">
               <div class="columns">
-                <div class="column">
+                <div class="column is-2">
                   <figure class="image-figure">
                     <img :src="item.image" alt="" />
                   </figure>
                 </div>
-                <div class="column is-half">
+                <div class="column">
                   <p>
-                    <strong>{{ item.title }}</strong>
+                    {{ item.title }}
                   </p>
                   <p class="control" v-if="items.rating">
                     <b-rate :value="items.rating" show-score="disabled" />
@@ -77,7 +90,7 @@
                   ></b-rate>
                   <p></p>
                 </div>
-                <div class="column">
+                <div class="column is-1">
                   <span>
                     <b-dropdown aria-role="list">
                       <button
@@ -85,7 +98,7 @@
                         slot="trigger"
                         slot-scope="{ active }"
                       >
-                        <span>Jumlah</span>
+                        <span></span>
                         <b-icon :icon="active ? 'menu-up' : 'menu-down'">
                         </b-icon>
                       </button>
@@ -94,7 +107,9 @@
                       <b-dropdown-item aria-role="listitem">3</b-dropdown-item>
                     </b-dropdown>
                   </span>
-                  <span>Rp. 50.000</span>
+                </div>
+                <div class="column is-2 mr-6 has-text-right">
+                  <p>Rp. 50.000</p>
                 </div>
               </div>
               <div class="colums">
@@ -105,7 +120,7 @@
               </div>
             </div>
           </div>
-          <div class="CHECKOUT-PANEL column px-4 py-4">
+          <div class="CHECKOUT-PANEL column is-3 px-4 py-4">
             <section class="sidebar">
               <div class="card-py">
                 <p class="is-size-4 pb-4"><strong>Ringkasan</strong></p>
