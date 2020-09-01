@@ -42,7 +42,7 @@
     <section class="container">
       <div class="column">
         <div class="content">
-          <p><strong>Customize Your Package</strong></p>
+          <p class="is-size-4"><strong>Belanjaan anda</strong></p>
         </div>
         <div class="columns">
           <div class="column is-three-quarters">
@@ -53,7 +53,7 @@
                     <img :src="item.image" alt="" />
                   </figure>
                 </div>
-                <div class="column">
+                <div class="column is-half">
                   <p>
                     <strong>{{ item.title }}</strong>
                   </p>
@@ -85,7 +85,7 @@
                         slot="trigger"
                         slot-scope="{ active }"
                       >
-                        <span>Quantity</span>
+                        <span>Jumlah</span>
                         <b-icon :icon="active ? 'menu-up' : 'menu-down'">
                         </b-icon>
                       </button>
@@ -94,7 +94,7 @@
                       <b-dropdown-item aria-role="listitem">3</b-dropdown-item>
                     </b-dropdown>
                   </span>
-                  <span>$45</span>
+                  <span>Rp. 50.000</span>
                 </div>
               </div>
               <div class="colums">
@@ -105,28 +105,30 @@
               </div>
             </div>
           </div>
-          <div class="column">
+          <div class="CHECKOUT-PANEL column px-4 py-4">
             <section class="sidebar">
               <div class="card-py">
-                <p><strong>Sumary</strong></p>
+                <p class="is-size-4 pb-4"><strong>Ringkasan</strong></p>
                 <div class="columns">
-                  <div class="column">Subtotal</div>
-                  <div class="column has-text-right"><p>$45</p></div>
+                  <div class="column">Total sementara</div>
+                  <div class="column has-text-right"><p>Rp. 50.000</p></div>
                 </div>
-                <div class="columns">
-                  <div class="column">Service Fee</div>
-                  <div class="column has-text-right">$2</div>
+                <div class="columns pb-4">
+                  <div class="column">Biaya layanan</div>
+                  <div class="column has-text-right">Rp. 5.000</div>
                 </div>
-                <div class="columns">
+                <div class="TEXT-TOTAL columns is-size-5">
                   <div class="column"><b>Total</b></div>
-                  <div class="column has-text-right"><b>#22</b></div>
+                  <div class="column has-text-right"><b>Rp. 55.000</b></div>
                 </div>
                 <div class="columns">
-                  <div class="column">Delivery Time</div>
-                  <div class="column has-text-right">2 days</div>
+                  <div class="column">Durasi pengiriman</div>
+                  <div class="column has-text-right">2 hari</div>
                 </div>
                 <div class="buttons">
-                  <b-button type="is-primary" expanded>Expanded</b-button>
+                  <b-button type="is-primary" expanded
+                    ><strong>Checkout</strong></b-button
+                  >
                 </div>
               </div>
             </section>
@@ -197,5 +199,18 @@ export default {
 <style>
 .sidebar {
   position: sticky;
+}
+.CHECKOUT-PANEL {
+  border-style: solid;
+  border-width: thin;
+  height: fit-content;
+  border-color: lightgrey;
+  border-radius: 0.5rem;
+}
+.TEXT-TOTAL {
+  border-top-style: solid;
+  border-width: thin;
+  border-color: lightgrey;
+  border-radius: 0.25rem;
 }
 </style>
