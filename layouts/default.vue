@@ -46,11 +46,19 @@
         </div>
         <div class="columns">
           <div class="column">
-            <div class="columns has-text-centered pb-0">
-              <div class="column is-2 has-text-grey">Gambar</div>
-              <div class="column has-text-grey">Deskripsi</div>
-              <div class="column is-1 has-text-grey">Jumlah</div>
-              <div class="column is-2 mr-6 has-text-grey has-text-right">
+            <div class="columns has-text-centered pb-0 mb-1">
+              <div class="BORDER-BOTTOM column is-2 has-text-grey-light pb-1">
+                Gambar
+              </div>
+              <div class="BORDER-BOTTOM column has-text-grey-light pb-1">
+                Deskripsi
+              </div>
+              <div class="BORDER-BOTTOM column is-1 has-text-grey-light pb-1">
+                Jumlah
+              </div>
+              <div
+                class="BORDER-BOTTOM column is-2 mr-6 has-text-grey-light has-text-right pb-1"
+              >
                 Harga
               </div>
             </div>
@@ -67,7 +75,7 @@
                   </figure>
                 </div>
                 <div class="column">
-                  <p>
+                  <p class="is-size-6">
                     {{ item.title }}
                   </p>
                   <p class="control" v-if="items.rating">
@@ -91,22 +99,66 @@
                   <p></p>
                 </div>
                 <div class="column is-1">
-                  <span>
-                    <b-dropdown aria-role="list">
-                      <button
-                        class="button"
-                        slot="trigger"
-                        slot-scope="{ active }"
-                      >
-                        <span></span>
-                        <b-icon :icon="active ? 'menu-up' : 'menu-down'">
-                        </b-icon>
-                      </button>
-                      <b-dropdown-item aria-role="listitem">1</b-dropdown-item>
-                      <b-dropdown-item aria-role="listitem">2</b-dropdown-item>
-                      <b-dropdown-item aria-role="listitem">3</b-dropdown-item>
-                    </b-dropdown>
-                  </span>
+                  <b-dropdown v-model="is1" aria-role="list">
+                    <button class="button" type="button" slot="trigger">
+                      <template v-if="is1">
+                        <span>1</span>
+                      </template>
+                      <template v-else-if="is2">
+                        <span>2</span>
+                      </template>
+                      <template v-else-if="is3">
+                        <span>3</span>
+                      </template>
+                      <template v-else-if="is4">
+                        <span>4</span>
+                      </template>
+                      <template v-else>
+                        <span>5</span>
+                      </template>
+                      <b-icon icon="menu-down"></b-icon>
+                    </button>
+
+                    <b-dropdown-item :value="true" aria-role="listitem">
+                      <div class="media">
+                        <div class="media-content">
+                          <h6>1</h6>
+                        </div>
+                      </div>
+                    </b-dropdown-item>
+
+                    <b-dropdown-item :value="false" aria-role="listitem">
+                      <div class="media">
+                        <div class="media-content">
+                          <h6>2</h6>
+                        </div>
+                      </div>
+                    </b-dropdown-item>
+
+                    <b-dropdown-item :value="false" aria-role="listitem">
+                      <div class="media">
+                        <div class="media-content">
+                          <h6>3</h6>
+                        </div>
+                      </div>
+                    </b-dropdown-item>
+
+                    <b-dropdown-item :value="false" aria-role="listitem">
+                      <div class="media">
+                        <div class="media-content">
+                          <h6>4</h6>
+                        </div>
+                      </div>
+                    </b-dropdown-item>
+
+                    <b-dropdown-item :value="false" aria-role="listitem">
+                      <div class="media">
+                        <div class="media-content">
+                          <h6>5</h6>
+                        </div>
+                      </div>
+                    </b-dropdown-item>
+                  </b-dropdown>
                 </div>
                 <div class="column is-2 mr-6 has-text-right">
                   <p>Rp. 50.000</p>
@@ -114,8 +166,8 @@
               </div>
               <div class="colums">
                 <p>
-                  Loreipsum menawi ada yang ditanyakan silahkan akan saya jawab
-                  entah itu benar atau salah
+                  Menawi ada yang ditanyakan silahkan akan saya jawab entah itu
+                  benar atau salah
                 </p>
               </div>
             </div>
@@ -138,10 +190,10 @@
                 </div>
                 <div class="columns">
                   <div class="column">Durasi pengiriman</div>
-                  <div class="column has-text-right">2 hari</div>
+                  <div class="column is-one-third has-text-right">2 hari</div>
                 </div>
                 <div class="buttons">
-                  <b-button type="is-primary" expanded
+                  <b-button type="is-halo" expanded
                     ><strong>Checkout</strong></b-button
                   >
                 </div>
@@ -207,6 +259,10 @@ export default {
           rating: 4.4,
         },
       ],
+      is1: true,
+      is2: true,
+      is3: true,
+      is4: true,
     }
   },
 }
@@ -220,12 +276,24 @@ export default {
   border-width: thin;
   height: fit-content;
   border-color: lightgrey;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
 }
 .TEXT-TOTAL {
   border-top-style: solid;
   border-width: thin;
   border-color: lightgrey;
   border-radius: 0.25rem;
+}
+.BORDER-BOTTOM {
+  border-bottom-style: solid;
+  border-width: thin;
+  border-color: lightgrey;
+  border-radius: 0.5rem;
+}
+a.dropdown-item.is-active,
+.dropdown .dropdown-menu .has-link a.is-active,
+button.dropdown-item.is-active {
+  /* background-color: #7957d5; */
+  /* color: #fff; */
 }
 </style>
