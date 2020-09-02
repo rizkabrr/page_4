@@ -66,4 +66,23 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+
+  // {
+  //   fontawesome: {
+  //     imports: [
+  //         {
+  //           set: '@fortawesome/pro-regular-svg-icons',
+  //           icons: ['faAdjust']
+  //         },
+  //         {
+  //           set: '@fortawesome/free-solid-svg-icons',
+  //           icons: ['fas']
+  //         },
+  //     ],
+  //   },
+  // }
+  fontawesome: {
+    component: 'fa'
+  },
+
 }
