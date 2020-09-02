@@ -41,7 +41,7 @@
     <section class="container">
       <div class="column">
         <div class="content">
-          <p class="is-size-4"><strong>UPDATE2</strong></p>
+          <p class="is-size-4"><strong>UPDATE BARENG 3</strong></p>
         </div>
         <div class="columns">
           <div class="column">
