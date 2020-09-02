@@ -15,22 +15,22 @@
           <ul>
             <li>
               <a href="#">
-                <span>Bulma</span>
+                <span>Basket</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <span>Documentation</span>
+                <span>Shopping</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <span>Components</span>
+                <span>Payment</span>
               </a>
             </li>
             <li class="is-active">
               <a href="#">
-                <span>Breadcrumb</span>
+                <span>Shipping</span>
               </a>
             </li>
           </ul>
