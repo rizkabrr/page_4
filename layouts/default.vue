@@ -41,7 +41,7 @@
     <section class="container">
       <div class="column">
         <div class="content">
-          <p class="is-size-4"><strong>Belanjaan anda</strong></p>
+          <p class="is-size-4"><strong>UPDATE</strong></p>
         </div>
         <div class="columns">
           <div class="column">
