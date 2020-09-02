@@ -15,21 +15,41 @@
           <ul>
             <li>
               <a href="#">
+                <span>
+                  <img
+                    src="https://img.icons8.com/metro/26/000000/card-in-use.png"
+                  />
+                </span>
                 <span>Basket</span>
               </a>
             </li>
             <li>
               <a href="#">
+                <span>
+                  <img
+                    src="https://img.icons8.com/metro/26/000000/card-in-use.png"
+                  />
+                </span>
                 <span>Shopping</span>
               </a>
             </li>
             <li>
               <a href="#">
+                <span>
+                  <img
+                    src="https://img.icons8.com/metro/26/000000/card-in-use.png"
+                  />
+                </span>
                 <span>Payment</span>
               </a>
             </li>
             <li class="is-active">
               <a href="#">
+                <span>
+                  <img
+                    src="https://img.icons8.com/metro/26/000000/card-in-use.png"
+                  />
+                </span>
                 <span>Shipping</span>
               </a>
             </li>
