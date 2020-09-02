@@ -1,52 +1,41 @@
 <template>
   <div>
-    <nav class="navbar py-4">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="#">
-          <img
-            src="~assets/2.png"
-            alt="Bulma: a modern CSS framework based on Flexbox"
-            width="150"
-          />
-        </a>
-      </div>
-      <div class="breadcrumb is-medium py-4" aria-label="breadcrumbs">
-        <div>
-          <ul>
-            <li>
-              <a href="#">
-                <span class="icon is-small">
-                  <i class="fas fa-home" aria-hidden="true"></i>
-                </span>
-                <span>Bulma</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="icon is-small">
-                  <i class="fas fa-book" aria-hidden="true"></i>
-                </span>
-                <span>Documentation</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="icon is-small">
-                  <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
-                </span>
-                <span>Components</span>
-              </a>
-            </li>
-            <li class="is-active">
-              <a href="#">
-                <span class="icon is-small">
-                  <i class="fas fa-thumbs-up" aria-hidden="true"></i>
-                </span>
-                <span>Breadcrumb</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+    <nav class="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
+      <div>
+        <ul>
+          <li>
+            <a href="#">
+              <span class="icon is-small">
+                <i class="fas fa-home" aria-hidden="true"></i>
+              </span>
+              <span>Bulma</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon is-small">
+                <i class="fas fa-book" aria-hidden="true"></i>
+              </span>
+              <span>Documentation</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon is-small">
+                <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
+              </span>
+              <span>Components</span>
+            </a>
+          </li>
+          <li class="is-active">
+            <a href="#">
+              <span class="icon is-small">
+                <i class="fas fa-thumbs-up" aria-hidden="true"></i>
+              </span>
+              <span>Breadcrumb</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
     <!-- ---------------------NAVEND------------------- -->
@@ -81,7 +70,7 @@
             <div class="card-pp" v-for="(item, i) in items" :key="i">
               <div class="columns">
                 <div class="column is-2">
-                  <figure class="image-figure">
+                  <figure class="image">
                     <img :src="item.image" alt="" />
                   </figure>
                 </div>
@@ -106,6 +95,7 @@
                     :rtl="isRtl"
                     :spaced="isSpaced"
                     :disabled="isDisabled"
+                    class="mt-2"
                   ></b-rate>
                   <p></p>
                 </div>
@@ -225,7 +215,7 @@ export default {
     return {
       rate: 4.6,
       maxs: 5,
-      sizes: '',
+      sizes: 'is-small',
       packs: 'mdi',
       icons: 'star',
       score: 'true',
@@ -241,30 +231,6 @@ export default {
         {
           title:
             'Some reason why my mouth have been silence in one of stopmoment',
-          image:
-            'https://cdna.artstation.com/p/assets/images/images/010/098/130/large/sajal-kr-chand-flat-landscape.jpg?1522574693',
-          rating: 4.4,
-        },
-        {
-          title: 'Slide 1',
-          image:
-            'https://cdna.artstation.com/p/assets/images/images/010/098/130/large/sajal-kr-chand-flat-landscape.jpg?1522574693',
-          rating: 4.4,
-        },
-        {
-          title: 'Slide 1',
-          image:
-            'https://cdna.artstation.com/p/assets/images/images/010/098/130/large/sajal-kr-chand-flat-landscape.jpg?1522574693',
-          rating: 4.4,
-        },
-        {
-          title: 'Slide 1',
-          image:
-            'https://cdna.artstation.com/p/assets/images/images/010/098/130/large/sajal-kr-chand-flat-landscape.jpg?1522574693',
-          rating: 4.4,
-        },
-        {
-          title: 'Slide 1',
           image:
             'https://cdna.artstation.com/p/assets/images/images/010/098/130/large/sajal-kr-chand-flat-landscape.jpg?1522574693',
           rating: 4.4,
