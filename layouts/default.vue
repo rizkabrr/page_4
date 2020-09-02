@@ -1,41 +1,59 @@
 <template>
   <div>
-    <nav class="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
-      <div>
-        <ul>
-          <li>
-            <a href="#">
-              <span class="icon is-small">
-                <i class="fas fa-home" aria-hidden="true"></i>
-              </span>
-              <span>Bulma</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="icon is-small">
-                <i class="fas fa-book" aria-hidden="true"></i>
-              </span>
-              <span>Documentation</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="icon is-small">
-                <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
-              </span>
-              <span>Components</span>
-            </a>
-          </li>
-          <li class="is-active">
-            <a href="#">
-              <span class="icon is-small">
-                <i class="fas fa-thumbs-up" aria-hidden="true"></i>
-              </span>
-              <span>Breadcrumb</span>
-            </a>
-          </li>
-        </ul>
+    <nav class="navbar py-4">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img src="~assets/2.png" alt="our logo" width="150" />
+        </a>
+        <div
+          class="navbar-burger burger"
+          data-target="navbarExampleTransparentExample"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div
+        class="breadcrumb has-large has-angel-right"
+        aria-label="breadcrumbs"
+      >
+        <div class="container py-4">
+          <ul>
+            <li>
+              <a href="#">
+                <span class="icon is-small">
+                  <b-icon pack="fas" icon="adobe" size="is-large" />
+                </span>
+                <span><strong>Bulma</strong></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon is-small">
+                  <i class="fas fa-book" aria-hidden="true"></i>
+                </span>
+                <span><strong>Documentation</strong></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon is-small">
+                  <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
+                </span>
+                <span><strong>Components</strong></span>
+              </a>
+            </li>
+            <li class="is-active">
+              <a href="#">
+                <span class="icon is-small">
+                  <i class="fas fa-thumbs-up" aria-hidden="true"></i>
+                </span>
+                <span><strong>Breadcrumb</strong></span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
     <!-- ---------------------NAVEND------------------- -->
