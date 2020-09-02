@@ -10,7 +10,7 @@
           />
         </a>
       </div>
-      <div class="breadcrumb is-medium py-4" aria-label="breadcrumbs">
+      <div class="breadcrumb is-large py-4" aria-label="breadcrumbs">
         <div>
           <ul>
             <li>
